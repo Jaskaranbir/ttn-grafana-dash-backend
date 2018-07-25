@@ -1,0 +1,38 @@
+version: "3"
+
+services:
+  proxybackend:
+    build: ./proxybackend
+    volumes:
+      - ./proxybackend:/usr/src/app/
+    ports:
+      - "8080:8080"
+    network_mode: host
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana
+    environment:
+      GF_INSTALL_PLUGINS: grafana-simple-json-datasource
+    ports:
+      - "3000:3000"
+    network_mode: host
+
+  mongodb:
+    image: mongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: Testtest123
+      MONGO_LORA_USERNAME: loraUser
+      MONGO_LORA_PASSWORD: Testtest123
+      MONGO_LORA_DB_NAME: loradb
+    ports:
+      - "27017:27017"
+    restart: on-failure:5
+    volumes:
+      - "$PWD/mongo-entrypoint/:/docker-entrypoint-initdb.d/"
+      - MongoDBVol:/data/db
+    network_mode: host
+
+volumes:
+  MongoDBVol:

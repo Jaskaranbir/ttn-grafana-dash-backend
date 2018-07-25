@@ -1,0 +1,15 @@
+{
+  "name": "proxybackend",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "lodash": "^4.17.10",
+    "mongoose": "^5.2.5"
+  },
+  "license": "MIT"
+}
