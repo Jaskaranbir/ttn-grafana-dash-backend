@@ -7,7 +7,7 @@ This proxybackend is the datasource for Grafana, using MongoDB as its storage-ba
 
 * The configuration can be changed using the [config][1] file.
 
-* By default, the mock data is inserted into MongoDB at intervals of 5 seconds.
+* By default, the mock data is inserted into MongoDB at intervals of 4.5 seconds.
 
   [0]: https://github.com/Jaskaranbir/ttn-grafana-dash-backend/blob/master/proxybackend/dao/dbWriter.js
   [1]: https://github.com/Jaskaranbir/ttn-grafana-dash-backend/blob/master/proxybackend/config.js

@@ -7,7 +7,9 @@ services:
       - ./proxybackend:/usr/src/app/
     ports:
       - "8080:8080"
-    network_mode: host
+    networks:
+      - default
+      - dashnet
 
   grafana:
     image: grafana/grafana:latest
@@ -16,7 +18,9 @@ services:
       GF_INSTALL_PLUGINS: grafana-simple-json-datasource
     ports:
       - "3000:3000"
-    network_mode: host
+    networks:
+      - default
+      - dashnet
 
   mongodb:
     image: mongo
@@ -32,7 +36,12 @@ services:
     volumes:
       - "$PWD/mongo-entrypoint/:/docker-entrypoint-initdb.d/"
       - MongoDBVol:/data/db
-    network_mode: host
+    networks:
+      - default
+      - dashnet
+
+networks:
+  dashnet:
 
 volumes:
   MongoDBVol:

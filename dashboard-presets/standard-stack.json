@@ -25,7 +25,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "LoraServerProxy",
+      "datasource": "ProxyBackendServer",
       "fill": 1,
       "gridPos": {
         "h": 9,
@@ -36,13 +36,13 @@
       "id": 3,
       "legend": {
         "alignAsTable": true,
-        "avg": false,
-        "current": false,
-        "max": false,
-        "min": false,
+        "avg": true,
+        "current": true,
+        "max": true,
+        "min": true,
         "show": true,
         "total": false,
-        "values": false
+        "values": true
       },
       "lines": true,
       "linewidth": 1,
@@ -109,7 +109,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "LoraServerProxy",
+      "datasource": "ProxyBackendServer",
       "fill": 1,
       "gridPos": {
         "h": 9,
@@ -120,13 +120,13 @@
       "id": 2,
       "legend": {
         "alignAsTable": true,
-        "avg": false,
-        "current": false,
-        "max": false,
-        "min": false,
+        "avg": true,
+        "current": true,
+        "max": true,
+        "min": true,
         "show": true,
         "total": false,
-        "values": false
+        "values": true
       },
       "lines": true,
       "linewidth": 1,
@@ -195,7 +195,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "LoraServerProxy",
+      "datasource": "ProxyBackendServer",
       "fill": 1,
       "gridPos": {
         "h": 9,
@@ -206,13 +206,13 @@
       "id": 5,
       "legend": {
         "alignAsTable": true,
-        "avg": false,
-        "current": false,
-        "max": false,
-        "min": false,
+        "avg": true,
+        "current": true,
+        "max": true,
+        "min": true,
         "show": true,
         "total": false,
-        "values": false
+        "values": true
       },
       "lines": true,
       "linewidth": 1,
@@ -283,7 +283,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "LoraServerProxy",
+      "datasource": "ProxyBackendServer",
       "fill": 1,
       "gridPos": {
         "h": 9,
@@ -294,13 +294,13 @@
       "id": 4,
       "legend": {
         "alignAsTable": true,
-        "avg": false,
-        "current": false,
-        "max": false,
-        "min": false,
+        "avg": true,
+        "current": true,
+        "max": true,
+        "min": true,
         "show": true,
         "total": false,
-        "values": false
+        "values": true
       },
       "lines": true,
       "linewidth": 1,
@@ -371,8 +371,8 @@
     "list": []
   },
   "time": {
-    "from": "now-1m",
-    "to": "now"
+    "from": "now-2m",
+    "to": "now-1m"
   },
   "timepicker": {
     "refresh_intervals": [
@@ -401,6 +401,5 @@
   },
   "timezone": "",
   "title": "Bee-Hive Monitoring Dashboard",
-  "uid": "1azxh5Kmk",
-  "version": 5
+  "uid": "1azxh5Kmk"
 }
