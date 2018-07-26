@@ -20,7 +20,7 @@ module.exports = {
   mongoDb: 'loradb',
 
   // Interval for mock-writer to push data to db
-  mockInsertInterval: 5000, // Millisecond
+  mockInsertInterval: 4500, // Millisecond
   // Port on which the server is run
   port: 8080
 }

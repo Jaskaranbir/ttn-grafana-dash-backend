@@ -19,7 +19,7 @@ Grafana uses [Simple-JSON][2] plugin as its datasource, which gets the data from
 
 * Default username/password for Grafana is `admin` and `admin` respectively.
 
-* Add a new `Simple-Json` type datasource to Grafana, point the URL to `localhost:8080` (for local setup, change as required depending on setup).
+* Add a new `Simple-Json` type datasource to Grafana, point the URL to `http://proxybackend:8080` (for local setup, modify as required depending on setup).
 
 * Add the dashboards/panels.
 
