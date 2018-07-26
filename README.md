@@ -26,7 +26,7 @@ Grafana uses [Simple-JSON][2] plugin as its datasource, which gets the data from
 * There's also a **[dashboard preset][5]** included which has identical layout as screenshot.
 
   [0]: https://www.thethingsnetwork.org
-  [1]: https://i.imgur.com/FWwdHDp.png
+  [1]: https://i.imgur.com/HUejPaj.png
   [2]: https://grafana.com/plugins/grafana-simple-json-datasource
   [3]: https://github.com/Jaskaranbir/ttn-grafana-dash-backend/tree/master/proxybackend
   [4]: https://docs.docker.com/compose/
