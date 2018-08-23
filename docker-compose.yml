@@ -10,6 +10,7 @@ services:
     networks:
       - default
       - dashnet
+    restart: on-failure:5
 
   grafana:
     image: grafana/grafana:latest
