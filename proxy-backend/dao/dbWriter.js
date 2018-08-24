@@ -27,7 +27,7 @@ const generateAndSaveMockData = () => {
     // have maxVariance defined
     .filter(k => SensorSchemaNameMap[k])
     // Process the values in accordance with maxVariance
-    .map(async (payloadKey) => {      
+    .map(async (payloadKey) => {
       const sensorData = transformData(payloadKey)
       // console.log(sensorData)
       const saveResult = await sensorData.save()

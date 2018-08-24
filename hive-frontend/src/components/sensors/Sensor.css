@@ -1,0 +1,44 @@
+/* Grafana-iframes */
+iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.sensor-container {
+  height: 298px;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 992px) {
+  .sensor-container {
+    margin-bottom: 30px;
+  }
+}
+
+.sensor-title{
+  margin: 0;
+  margin-bottom: -23px;
+  position: relative;
+  text-align: center;
+  color: #52545c;
+  z-index: 100;
+}
+
+.spinner-container {
+  position: relative;
+  margin-bottom: -70px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.spinner {
+  width: 70px !important;
+  height: 70px !important;
+  margin: auto;
+}
+
+.spinner-text {
+  font-family: Roboto;
+  font-size: 15px;
+  text-align: center;
+}

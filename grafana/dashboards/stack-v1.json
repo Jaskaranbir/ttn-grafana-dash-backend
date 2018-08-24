@@ -15,7 +15,7 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": 1,
+  "id": 3,
   "links": [],
   "panels": [
     {
@@ -371,8 +371,8 @@
     "list": []
   },
   "time": {
-    "from": "now-2m",
-    "to": "now-1m"
+    "from": "now-1m",
+    "to": "now"
   },
   "timepicker": {
     "refresh_intervals": [
@@ -400,6 +400,7 @@
     ]
   },
   "timezone": "",
-  "title": "Bee-Hive Monitoring Dashboard",
-  "uid": "1azxh5Kmk"
+  "title": "Bee-Hive Monitoring Dashboard - v1",
+  "uid": "bA-tUPpmz",
+  "version": 2
 }

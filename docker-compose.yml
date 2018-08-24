@@ -1,24 +1,41 @@
-version: "3"
+version: "3.4"
 
 services:
-  proxybackend:
-    build: ./proxybackend
+  hivefrontend:
+    build: ./hive-frontend
+    environment:
+      GRAFANA_ADDR: http://localhost:3000
     volumes:
-      - ./proxybackend:/usr/src/app/
+      - ./hive-frontend:/usr/src/app/
+    ports:
+      - "80:80"
+    networks:
+      - default
+      - dashnet
+
+  proxybackend:
+    build: ./proxy-backend
+    volumes:
+      - ./proxy-backend:/usr/src/app/
     ports:
       - "8080:8080"
     networks:
       - default
       - dashnet
-    restart: on-failure:5
+    restart: on-failure
 
   grafana:
-    image: grafana/grafana:latest
+    build: './grafana'
     container_name: grafana
     environment:
-      GF_INSTALL_PLUGINS: grafana-simple-json-datasource
+      GF_INSTALL_PLUGINS: grafana-simple-json-datasource,grafana-piechart-panel
+      GF_AUTH_ANONYMOUS_ENABLED: "true"
     ports:
       - "3000:3000"
+    volumes:
+      - GrafanaVol:/var/lib/grafana
+      - ./grafana/dashboards/:/var/lib/grafana/dashboards
+      - ./grafana/provisioning/:/etc/grafana/provisioning/
     networks:
       - default
       - dashnet
@@ -45,4 +62,5 @@ networks:
   dashnet:
 
 volumes:
+  GrafanaVol:
   MongoDBVol:
