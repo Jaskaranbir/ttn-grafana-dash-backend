@@ -4,7 +4,7 @@ services:
   hivefrontend:
     build: ./hive-frontend
     environment:
-      GRAFANA_ADDR: http://localhost:3000
+      REACT_APP_GRAFANA_ADDR: http://localhost:3000
     volumes:
       - ./hive-frontend:/usr/src/app/
     ports:
