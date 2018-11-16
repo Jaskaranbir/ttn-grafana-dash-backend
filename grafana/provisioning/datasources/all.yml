@@ -18,3 +18,21 @@ datasources:
     keepCookies: []
     tlsSkipVerify: true
   readOnly: false
+
+- name: SolarBackendServer
+  id: 1
+  orgId: 1
+  editable: true
+  type: grafana-simple-json-datasource
+  access: proxy
+  url: http://solarbackend:8081
+  password: ''
+  user: ''
+  database: ''
+  basicAuth: false
+  isDefault: true
+  jsonData:
+    httpMethod: GET
+    keepCookies: []
+    tlsSkipVerify: true
+  readOnly: false

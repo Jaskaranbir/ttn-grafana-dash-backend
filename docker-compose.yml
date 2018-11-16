@@ -24,6 +24,17 @@ services:
       - dashnet
     restart: on-failure
 
+  solarbackend:
+    build: ./solar-dash-backend
+    volumes:
+      - ./solar-dash-backend:/usr/src/app/
+    ports:
+      - "8081:8081"
+    networks:
+      - default
+      - dashnet
+    restart: on-failure
+
   grafana:
     build: './grafana'
     container_name: grafana

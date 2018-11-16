@@ -17,5 +17,5 @@ module.exports = {
   mongoDb: 'loradb',
 
   // Port on which the server is run
-  port: 8080
+  port: 8081
 }
