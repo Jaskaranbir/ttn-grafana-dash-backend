@@ -1,0 +1,16 @@
+{
+  "name": "solardash",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "lodash": "^4.17.11",
+    "mongoose": "^5.3.12",
+    "serialport": "^7.0.2"
+  },
+  "license": "MIT"
+}
