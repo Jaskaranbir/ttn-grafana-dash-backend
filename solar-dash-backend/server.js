@@ -14,7 +14,8 @@ app.all('/', (_, res) => res.send("Server is working."))
 // ============ App Code =================
 
 app.all('/search', (_, res) => {
-  const sensorNames = Object.keys(config.sensorModels)
+  const models = config.sensorModels
+  const sensorNames = Object.keys(models).map(k => models[k])
   res.send(sensorNames)
 })
 
